@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 1rem;
+        --background: 0.145 0 0;
+        --foreground: 0.985 0 0;
+        --card: 0.205 0 0;
+        --card-foreground: 0.985 0 0;
+        --popover: 0.269 0 0;
+        --popover-foreground: 0.985 0 0;
+        --primary: 0.922 0 0;
+        --primary-foreground: 0.205 0 0;
+        --secondary: 0.269 0 0;
+        --secondary-foreground: 0.985 0 0;
+        --muted: 0.269 0 0;
+        --muted-foreground: 0.708 0 0;
+        --accent: 0.371 0 0;
+        --accent-foreground: 0.985 0 0;
+        --destructive: 0.704 0.191 22.216;
+        --destructive-foreground: 0.205 0 0;
+        --border: 1 0 0 / 10%;
+        --input: 1 0 0 / 15%;
+        --ring: 0.556 0 0;
+        --chart-1: 0.488 0.243 264.376;
+        --chart-2: 0.696 0.17 162.48;
+        --chart-3: 0.769 0.188 70.08;
+        --chart-4: 0.627 0.265 303.9;
+        --chart-5: 0.645 0.246 16.439;
+        --sidebar: 0.205 0 0;
+        --sidebar-foreground: 0.985 0 0;
+        --sidebar-primary: 0.488 0.243 264.376;
+        --sidebar-primary-foreground: 0.985 0 0;
+        --sidebar-accent: 0.269 0 0;
+        --sidebar-accent-foreground: 0.985 0 0;
+        --sidebar-border: 1 0 0 / 10%;
+        --sidebar-ring: 0.439 0 0;
+        
+        /* Luxury Brand Colors */
+        --luxury-red: 0.55 0.22 25;
+        --luxury-gold: 0.75 0.15 75;
+    }
+
+    .dark {
+        --background: 0.145 0 0;
+        --foreground: 0.985 0 0;
+        --card: 0.205 0 0;
+        --card-foreground: 0.985 0 0;
+        --popover: 0.269 0 0;
+        --popover-foreground: 0.985 0 0;
+        --primary: 0.922 0 0;
+        --primary-foreground: 0.205 0 0;
+        --secondary: 0.269 0 0;
+        --secondary-foreground: 0.985 0 0;
+        --muted: 0.269 0 0;
+        --muted-foreground: 0.708 0 0;
+        --accent: 0.371 0 0;
+        --accent-foreground: 0.985 0 0;
+        --destructive: 0.704 0.191 22.216;
+        --destructive-foreground: 0.205 0 0;
+        --border: 1 0 0 / 10%;
+        --input: 1 0 0 / 15%;
+        --ring: 0.556 0 0;
+        --chart-1: 0.488 0.243 264.376;
+        --chart-2: 0.696 0.17 162.48;
+        --chart-3: 0.769 0.188 70.08;
+        --chart-4: 0.627 0.265 303.9;
+        --chart-5: 0.645 0.246 16.439;
+        --sidebar: 0.205 0 0;
+        --sidebar-foreground: 0.985 0 0;
+        --sidebar-primary: 0.488 0.243 264.376;
+        --sidebar-primary-foreground: 0.985 0 0;
+        --sidebar-accent: 0.269 0 0;
+        --sidebar-accent-foreground: 0.985 0 0;
+        --sidebar-border: 1 0 0 / 10%;
+        --sidebar-ring: 0.439 0 0;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-feature-settings: "rlig" 1, "calt" 1;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+@layer utilities {
+    /* Luxury brand colors */
+    .text-luxury-red {
+        color: oklch(var(--luxury-red));
+    }
+    
+    .text-luxury-gold {
+        color: oklch(var(--luxury-gold));
+    }
+    
+    .bg-luxury-red {
+        background-color: oklch(var(--luxury-red));
+    }
+    
+    .bg-luxury-gold {
+        background-color: oklch(var(--luxury-gold));
+    }
+    
+    .border-luxury-red {
+        border-color: oklch(var(--luxury-red));
+    }
+    
+    .border-luxury-gold {
+        border-color: oklch(var(--luxury-gold));
+    }
+    
+    /* Luxury CTA Button */
+    .luxury-cta {
+        background: linear-gradient(to right, oklch(var(--luxury-red)), oklch(var(--luxury-gold)), oklch(var(--luxury-red)));
+        background-size: 200% 100%;
+        color: white;
+        font-weight: 700;
+        transition: all 0.3s ease;
+        animation: gradient-shift 3s ease infinite;
+    }
+    
+    .luxury-cta:hover {
+        filter: brightness(1.1);
+    }
+    
+    @keyframes gradient-shift {
+        0%, 100% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+    }
+    
+    /* Luxury Card Styles */
+    .luxury-card {
+        background-color: oklch(var(--card) / 0.5);
+        backdrop-filter: blur(12px);
+        border: 1px solid oklch(var(--border) / 0.5);
+        border-radius: 1.5rem;
+        transition: all 0.3s ease;
+    }
+    
+    .luxury-card-premium {
+        background-color: oklch(var(--card) / 0.5);
+        backdrop-filter: blur(12px);
+        border: 1px solid oklch(var(--luxury-gold) / 0.3);
+        border-radius: 1.5rem;
+        box-shadow: 0 25px 50px -12px oklch(var(--luxury-gold) / 0.1);
+        transition: all 0.3s ease;
+    }
+    
+    /* Smooth scrolling for anchor links */
+    @supports (scroll-behavior: smooth) {
+        html {
+            scroll-behavior: smooth;
+        }
+    }
+}
+

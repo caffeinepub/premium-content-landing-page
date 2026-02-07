@@ -1,0 +1,13 @@
+{
+  "frontend/src/App.tsx": "Main application component that orchestrates the landing page sections and manages the unlock modal state.",
+  "frontend/src/components/Hero.tsx": "Hero section with blurred background image, bold typography, gradient headline, and primary CTA button.",
+  "frontend/src/components/Features.tsx": "Features section displaying six premium benefits in rounded cards with icons and hover effects.",
+  "frontend/src/components/Testimonials.tsx": "Testimonials section with three customer reviews, ratings, and profile images in luxury-styled cards.",
+  "frontend/src/components/Pricing.tsx": "Pricing section showcasing the $29 one-time payment offer with feature list and prominent CTA button.",
+  "frontend/src/components/FAQ.tsx": "FAQ accordion section with eight common questions about access, pricing, privacy, and support.",
+  "frontend/src/components/Footer.tsx": "Footer component with brand info, quick links, social media icons, and attribution to caffeine.ai.",
+  "frontend/src/components/StickyUnlockButton.tsx": "Sticky floating button that appears after scrolling 300px, providing persistent access to unlock modal.",
+  "frontend/src/components/UnlockModal.tsx": "Modal dialog for purchase completion with email input, terms checkbox, and payment processing simulation.",
+  "frontend/src/index.css": "Global styles with dark theme, luxury red/gold color tokens, and custom utility classes for CTA buttons and cards using direct OKLCH color values instead of @apply with opacity modifiers.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with luxury brand colors (red and gold) mapped to CSS custom properties."
+}
